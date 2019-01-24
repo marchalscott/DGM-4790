@@ -1,7 +1,23 @@
-const http = require('http');
-const fs   = require('fs');
+const http    = require('http');
+const fs      = require('fs');
+const express = require('express');
+const app     = express('');
 
-const server = http.createServer((req, res) => {
+app.use('/add-product', (req, res, next)=> {
+    console.log('Another in the middleware!')
+    res.send('<h1>Hello from express</h1>');
+});
+
+app.use('/', (req, res, next)=> {
+    console.log('Another in the middleware!')
+    res.send('<h1>Hello from express</h1>');
+});
+
+const server  = http.createServer(app);
+
+app.listen(5000);
+
+/* const server = http.createServer((req, res) => {
     if(req.url === '/') {
         res.setHeader('Content-type', 'text/html')
         res.setHeader('Marchal', 'Marchal is cool')
@@ -35,6 +51,4 @@ const server = http.createServer((req, res) => {
         res.setHeader('Location', '/')
         res.end()
     }
-});
-
-server.listen(5000);
+}); */

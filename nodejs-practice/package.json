@@ -1,0 +1,15 @@
+{
+  "name": "nodejs-practice",
+  "version": "1.0.0",
+  "description": "this is my practice node.js file for the udemy vids",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "git-init": "^1.0.0"
+  }
+}
