@@ -1,18 +1,24 @@
-const http    = require('http');
-const fs      = require('fs');
+const path = require('path');
+
 const express = require('express');
-const app     = express('');
+const bodyParser = require('body-parser');
 
-app.use('/test',(req, res, next)=>{
-    console.log('This is only a test')
-    res.send('<h1>This is only a test</h1>');
+const app = express();
+
+app.set('view-engine',"ejs");
+app.set('view','views');
+
+const adminData = require('./routes/admin');
+const shopRoutes = require('./routes/shop');
+
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/admin', adminData.routes);
+app.use(shopRoutes);
+
+app.use((req, res, next) => {
+    res.status(404).render('404', { pageTitle: 'Page Not Found'});
 });
 
-app.use('/', (req, res, next)=> {
-    console.log('This is my message from my server')
-    res.send('Hello from my server again.');
-});
-
-
-const server  = http.createServer(app);
-app.listen(2000);
+app.listen(3000);
