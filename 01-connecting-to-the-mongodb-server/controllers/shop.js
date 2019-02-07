@@ -97,7 +97,8 @@ exports.postOrder = (req, res, next) => {
         products: products
       });
       return order.save();
-    }).then(result => {
+    })
+    .then(result => {
       return req.user.clearCart();
     })
     .then(() => {
