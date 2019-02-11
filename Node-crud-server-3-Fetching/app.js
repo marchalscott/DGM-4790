@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 
 // set up the mongoose to Atlas connection
-const dev_db_url = 'mongodb+srv://someuser:abcd1234@product-cluster-opg2q.gcp.mongodb.net/product'
+const dev_db_url = 'mongodb+srv://admin:Halopro10!!@cluster0-hityq.mongodb.net/test?retryWrites=true'
 const mongoDB = process.env.MONGODB_URI || dev_db_url
 mongoose.connect(mongoDB, {useNewUrlParser: true})
 mongoose.Promise = global.Promise
