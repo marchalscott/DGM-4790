@@ -5,17 +5,25 @@ fetch('https://pokeapi.co/api/v2/pokemon?limit=25')
   .then(myJson => {
     const pokeArray = myJson.results
     pokeArray.forEach(pokemon => {
-      postData(`http://localhost:5775/pokemon/pokemon`, pokemon)
-        .then(data => {
-          fetch(data.url)
-          .then(result => (result.json))
-          .then(pokemonJson => {
-            console.log(pokemonJson.results)
+      let purl = pokemon.url
+      fetch(purl)
+          .then(result => result.json())
+          .then(fullPokemon => {
+            return newPokemon = {
+              height: fullPokemon.height,
+              weight: fullPokemon.weight,
+              name: fullPokemon.name,
+              url: purl,
+            }
           })
-        }) 
+      .then(newOne => {
+        console.log(newOne)
+        postData(`http://localhost:5775/pokemon/pokemon`, newOne)
+        .then(data => console.log(data))
         .catch(error => console.error(error))
     })
   })
+})
 
 const postData = (url = ``, data = {}) => {
   return fetch(url, {
@@ -24,5 +32,6 @@ const postData = (url = ``, data = {}) => {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(data) 
-  }).then(response => response.json())
+  }).then(response => response.json()
+  )
 }
