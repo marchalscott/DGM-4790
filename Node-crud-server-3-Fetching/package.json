@@ -20,15 +20,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thortek/Node-crud-server.git"
+    "url": "git+https://github.com/marchalscott/DGM-4790"
   },
   "keywords": [
     "node"
   ],
-  "author": "Thor Anderson",
+  "author": "Marchal Eardley",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/thortek/Node-crud-server/issues"
+    "url": "https://github.com/marchalscott/DGM-4790"
   },
-  "homepage": "https://github.com/thortek/Node-crud-server#readme"
+  "homepage": "https://github.com/marchalscott/DGM-4790"
 }
