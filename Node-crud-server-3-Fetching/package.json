@@ -9,6 +9,9 @@
     "mongoose": "^5.4.9",
     "save": "^2.3.3"
   },
+  "engines": {
+    "node":"11.5.0"
+  },
   "devDependencies": {
     "node-fetch": "^2.3.0",
     "nodemon": "^1.18.9"
