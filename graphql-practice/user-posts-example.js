@@ -11,6 +11,9 @@ async function main() {
       posts: {
         create: [{
           title: "Join us for GraphQL Conf in 2019",
+          comments: {
+            create: [{bodyText: 'I loved the conference!'}, {bodyText: 'I love graphQl!'}]
+          }
         }, {
           title: "Subscribe to GraphQL Weekly for GraphQL news",
         }]
