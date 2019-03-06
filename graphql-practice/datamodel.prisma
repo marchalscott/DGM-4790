@@ -1,16 +1,17 @@
 type User {
   id: ID! @unique
   createdAt: DateTime!
-  updatedAt: DateType!
+  updatedAt: DateTime!
   email: String @unique
   name: String!
   posts: [Post!]!
+  feeds: [Feed!]!
 }
 
 type Post {
   id: ID! @unique
   createdAt: DateTime!
-  updatedAt: DateType!
+  updatedAt: DateTime!
   title: String!
   published: Boolean! @default(value: "false")
   author: User
@@ -20,7 +21,15 @@ type Post {
 type Comment {
   id: ID! @unique
   createdAt: DateTime!
-  updatedAt: DateType!
+  updatedAt: DateTime!
+  bodyText: String!
+  createdBy: User!
+}
+
+type Feed {
+  id: ID! @unique
+  createdAt: DateTime!
+  updatedAt: DateTime!
   bodyText: String!
   createdBy: User!
 }

@@ -18,7 +18,8 @@ async function main() {
   const usersCalledAlice = await prisma
   .users({
     where: {
-      name: 'Alice'
+      name: 'Alice',
+      email: 'test@test.com'
     }
   })
   console.log(usersCalledAlice)
