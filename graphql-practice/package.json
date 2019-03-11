@@ -8,7 +8,7 @@
     "deploy": "prisma deploy",
     "reset": "prisma reset --force",
     "delete": "prisma delete --force",
-    "start": "node index.js"
+    "start": "node index.ts"
   },
   "author": "Marchal Eardley",
   "license": "ISC",
