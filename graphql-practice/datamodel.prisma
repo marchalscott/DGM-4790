@@ -1,35 +1,16 @@
 type User {
   id: ID! @unique
-  createdAt: DateTime!
-  updatedAt: DateTime!
-  email: String @unique
-  name: String!
+  email: String! @unique
+  name: String
   posts: [Post!]!
-  feeds: [Feed!]!
 }
 
 type Post {
   id: ID! @unique
   createdAt: DateTime!
   updatedAt: DateTime!
-  title: String!
   published: Boolean! @default(value: "false")
-  author: User
-  comments: [Comment!]!
-}
-
-type Comment {
-  id: ID! @unique
-  createdAt: DateTime!
-  updatedAt: DateTime!
-  bodyText: String!
-  createdBy: User!
-}
-
-type Feed {
-  id: ID! @unique
-  createdAt: DateTime!
-  updatedAt: DateTime!
-  bodyText: String!
-  createdBy: User!
+  title: String!
+  content: String
+  author: User!
 }

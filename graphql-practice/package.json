@@ -13,6 +13,9 @@
   "author": "Marchal Eardley",
   "license": "ISC",
   "dependencies": {
-    "prisma-client-lib": "^1.27.3"
+    "graphql": "^14.1.1",
+    "nexus": "^0.11.2",
+    "prisma-client-lib": "^1.27.3",
+    "typescript": "^3.3.3333"
   }
 }
