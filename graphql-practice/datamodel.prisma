@@ -15,12 +15,12 @@ type Post {
   author: User!
 }
 
-type Trails {
-  id: ID! @unique
-  name: String
-  type: String
-  summary: String
-  difficulty: String
-  location: String
-  length: int
-}
+##type Trails {
+  ##id: ID! @unique
+  ##name: String
+  ##type: String
+  ##summary: String
+  ##difficulty: String
+  ##location: String
+  ##length: int
+##}
