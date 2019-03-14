@@ -1,14 +1,14 @@
 {
   "name": "grapql-server-practice",
   "version": "1.0.0",
-  "description": "This is my graphql server practice project",
+  "description": "Graphql server practice project",
   "main": "index.js",
   "scripts": {
     "dockerStart": "docker-compose -f ./docker-compose.yml up -d",
     "deploy": "prisma deploy",
     "reset": "prisma reset --force",
-    "delete": "prisma delete --force", 
-    "start": "ts-node-dev --no-notify --respawn --transpileOnly ./"
+    "delete": "prisma delete --force",
+    "start": "node index.js"
   },
   "author": "Marchal Eardley",
   "license": "ISC",
