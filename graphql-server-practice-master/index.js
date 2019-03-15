@@ -1,14 +1,14 @@
 const { prisma } = require('./generated/prisma-client')
-const { pokedata } = require('./data/pokemon-data.js')
+const { traildata } = require('./data/trail-data.js/index.js')
 
 // A `main` function so that we can use async/await
 async function main() {
-    pokedata.forEach(async (pokemon) => {
-    const newPokemon = await prisma.createPokemon({
-      name: pokemon.name,
-      url: pokemon.url
+    traildata.forEach(async (trail) => {
+    const newTrail = await prisma.createTrails({
+      name: trail.name,
+      url: trail.url
     })
-    console.log(`Created new pokemon: ${newPokemon.name} (ID: ${newPokemon.id})`)
+    console.log(`Created new trail: ${newTrail.name} (ID: ${newTrail.id})`)
     })
 }
 
