@@ -15,11 +15,6 @@ type Trails {
   stars: Int
   starVotes: Int
   location: String
-  url: "https://www.mtbproject.com/trail/46286/betasso-preserve"
-  imgSqSmall: "https://cdn-files.apstatic.com/mtb/7002944_sqsmall_1433864122.jpg"
-  imgSmall: "https://cdn-files.apstatic.com/mtb/7002944_small_1433864122.jpg"
-  imgSmallMed: "https://cdn-files.apstatic.com/mtb/7002944_smallMed_1433864122.jpg"
-  imgMedium: "https://cdn-files.apstatic.com/mtb/7002944_medium_1433864122.jpg"
   length: Int
   ascent: Int
   descent: Int
