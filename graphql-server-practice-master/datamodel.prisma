@@ -1,12 +1,4 @@
 type Trails {
-  name: String
-  type: String
-  stars: Int
-  difficulty: String
-  length: String
-}
-
-type Trails {
   id: !@Unique!
   name: String
   type: String
