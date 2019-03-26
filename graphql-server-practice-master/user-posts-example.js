@@ -11,12 +11,12 @@ async function main() {
       email: "igor@yahoo.io",
       posts: {
         create: [{
-          title: "Join us for GraphQL Conf in 2019",
+          title: "Add a trail to our site!",
           comments: {
-            create: [{bodyText: 'I loved GraphQL Conf!'}, {bodyText: 'I love cookie dough ice cream!'}]
+            create: [{bodyText: 'I loved mountain biking!'}, {bodyText: 'I love mountain biking!'}]
           }
         }, {
-          title: "Subscribe to GraphQL Weekly for GraphQL news",
+          title: "Subscribe to mountain bike trails Weekly for trail news",
         }]
       },
     })
