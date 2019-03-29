@@ -6,6 +6,8 @@ async function main() {
     traildata.forEach(async (trail) => {
     const newTrail = await prisma.createTrails({
       name: trail.name,
+      type: trail.type,
+      summary: trail.summary,
       url: trail.url
     })
     console.log(`Created new trail: ${newTrail.name} (ID: ${newTrail.id})`)
