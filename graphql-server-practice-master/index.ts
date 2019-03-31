@@ -5,7 +5,7 @@ async function main() {
 
   // Create a new user called `Alice`
   const newTrail = await prisma.createTrails({ name: 'Alice' })
-  console.log(`Created new user: ${newTrail.name} (ID: ${newTrail.id})`)
+  console.log(`Created new user: ${newTrail.name} (ID: ${newTrail})`)
 
   // Read all users from the database and print them to the console
   const allUsers = await prisma.trailses()
