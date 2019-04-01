@@ -1,5 +1,5 @@
 type Trails {
-  id: !@Unique!
+  id: ID! @Unique!
   name: String!
   type: String!
   difficulty: String!
