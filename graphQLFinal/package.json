@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node ./src/index.ts"
+    "start": "ts-node ./src/index.ts",
+    "dockerStart": "docker-compose -f ./docker-compose.yml up -d",
+    "deploy": "./prisma/prisma deploy",
+    "load": "node ./seed/seedDatabase.js",
+    "reset": "./prisma/prisma reset --force",
+    "delete": "./prisma/prisma delete --force"
   },
   "keywords": [],
   "author": "",
