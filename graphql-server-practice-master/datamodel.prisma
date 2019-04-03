@@ -1,7 +1,0 @@
-type Trails {
-  id: ID! @Unique!
-  name: String!
-  type: String!
-  difficulty: String!
-  stars: Float!
-        }
