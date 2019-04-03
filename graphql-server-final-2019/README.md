@@ -21,7 +21,7 @@ https://github.com/marchalscott/DGM-4790/tree/master/graphql-server-final-2019
 ```
 
 ## 3 Query Resolvers
-#### Find/Read all products
+#### Find all products
 ```
 query allProducts { 
     products { 
@@ -36,7 +36,7 @@ query allProducts {
     }
 ```
 
-#### Find/Read all products by type
+#### Find all products by type
 ```
 query findProductByType { 
     productsConnection(where: {
@@ -53,7 +53,7 @@ query findProductByType {
     }
 ```
 
-#### Find/Read all products by price.
+#### Find all products by price.
 ```
 query findProductByPrice { 
     productsConnection(where: {
