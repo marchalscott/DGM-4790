@@ -1,6 +1,6 @@
 ## Prisma Server
 
-#DataStore
+# DataStore
 ```
 Canyon Bikes datastore contains 25 products.
 ```
@@ -21,7 +21,7 @@ https://github.com/marchalscott/DGM-4790/tree/master/graphql-server-final-2019
 ```
 
 ## 3 Query Resolvers
-####Find/Read all products
+#### Find/Read all products
 ```
 query allProducts { 
     products { 
@@ -36,7 +36,7 @@ query allProducts {
     }
 ```
 
-####Find/Read all products by type
+#### Find/Read all products by type
 ```
 query findProductByType { 
     productsConnection(where: {
@@ -53,7 +53,7 @@ query findProductByType {
     }
 ```
 
-####Find/Read all products by price.
+#### Find/Read all products by price.
 ```
 query findProductByPrice { 
     productsConnection(where: {
@@ -73,7 +73,7 @@ query findProductByPrice {
 
 ## 3 Mutation Resolvers
 
-####Create
+#### Create
 ```
 mutation createProduct { 
     createProduct(
@@ -98,7 +98,7 @@ mutation createProduct {
 }
 ```
 
-####Update
+#### Update
 ```
 mutation updateProduct { 
     updateProduct(where: {
@@ -119,7 +119,7 @@ data: {
 }
 ```
 
-####Delete
+#### Delete
 ```
 mutation deleteProduct { 
     deleteProduct(where: {
