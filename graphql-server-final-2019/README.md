@@ -2,7 +2,7 @@
 
 #DataStore
 ```
-Canyon Bikes datastore contains 25 items.
+Canyon Bikes datastore contains 25 products.
 ```
 #### Clone the repository:
 ```
