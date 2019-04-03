@@ -1,0 +1,29 @@
+{
+  "name": "graphql-server-final-2019",
+  "version": "1.0.0",
+  "description": "This is my grqphql server project",
+  "main": "index.js",
+  "scripts": {
+    "dockerStart": "docker-compose -f ./docker-compose.yml up -d",
+    "deploy": "prisma deploy",
+    "load": "node ./seed/seedDatabase.js",
+    "reset": "prisma reset --force",
+    "delete": "prisma delete --force",
+    "start": "ts-node-dev --no-notify --respawn --transpileOnly ./"
+  },
+  "author": "Marchal Eardley",
+  "license": "ISC",
+  "dependencies": {
+    "graphql": "^14.2.1",
+    "graphql-request": "^1.8.2",
+    "graphql-yoga": "^1.17.4",
+    "nexus": "^0.11.3",
+    "nexus-prisma": "^0.3.5",
+    "prisma-client-lib": "^1.28.3",
+    "yoga": "0.0.18"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^1.0.0-pre.32",
+    "typescript": "^3.3.3333"
+  }
+}

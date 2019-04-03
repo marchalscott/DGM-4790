@@ -1,0 +1,9 @@
+type Product {
+  id: ID! @unique
+  brand: String!
+  name: String! 
+  price: Float!
+  color: String!
+  size: String!
+  style: String!
+}
