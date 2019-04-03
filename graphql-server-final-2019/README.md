@@ -1,6 +1,6 @@
-## Prisma Server
+# Prisma Server
 
-# DataStore
+### DataStore
 ```
 Canyon Bikes datastore contains 25 products.
 ```
