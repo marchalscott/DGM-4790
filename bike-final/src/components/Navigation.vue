@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Nav Bar</h2>
+    <!--<h2>Nav Bar</h2>-->
     <nav>
       <router-link class="spacing" v-for="routes in links" 
       v-bind:key="routes.id"
