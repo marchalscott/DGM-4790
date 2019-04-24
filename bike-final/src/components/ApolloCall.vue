@@ -20,7 +20,10 @@ export default {
      this.$apollo
         .query({
           query: gql`
-			[YOUR QUERY FROM THE PLAYGROUND GOES HERE]
+			[exports.all = (req, res) => {
+    Product.find()
+    .then( (allProducts) => res.send(allProducts));
+}]
           `
         })
         .then(res => {
