@@ -6,7 +6,7 @@
       <v-btn @click="toggle()" right>restful data</v-btn>
     </v-toolbar>
     <v-content>
-      <v-container v-show="isOpen">
+      <v-container>
         <WatchShopAllProducts/>
         <WatchShopCreateProduct/>
         <WatchShopUpdateProduct/>

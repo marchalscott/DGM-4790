@@ -9,12 +9,12 @@ Vue.use(VueApollo);
 const AUTH_TOKEN = 'apollo-token';
 
 // Http endpoint
-const httpEndpoint = process.env.VUE_APP_GRAPHQL_HTTP || 'http://localhost:5050/';
+const httpEndpoint = process.env.VUE_APP_GRAPHQL_HTTP || 'https://shielded-ravine-64228.herokuapp.com/products';
 
 // Config
 const defaultOptions = {
   httpEndpoint,
-  wsEndpoint: process.env.VUE_APP_GRAPHQL_WS || 'ws://localhost:5050/',
+  wsEndpoint: process.env.VUE_APP_GRAPHQL_WS || 'ws://shielded-ravine-64228.herokuapp.com/products',
   tokenName: AUTH_TOKEN,
   persisting: false,
   websocketsOnly: false,
