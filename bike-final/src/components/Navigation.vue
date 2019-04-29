@@ -1,8 +1,7 @@
 <template>
   <div>
-    <!--<h2>Nav Bar</h2>-->
     <nav>
-      <router-link class="spacing" v-for="routes in links" 
+      <router-link class="margin" v-for="routes in links" 
       v-bind:key="routes.id"
       :to="`${routes.page}`">{{routes.text}}</router-link>
     </nav>
@@ -31,7 +30,7 @@ export default {
 }
 </script>
 <style>
-.spacing {
+.margin {
   margin-right: 10px;
 }
 </style>

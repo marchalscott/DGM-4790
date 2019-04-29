@@ -7,7 +7,7 @@
               :key="product.name"
               xs4
             >
-                <myProductCard :product="product" width="200px" height="200px"/>
+                <myProductCard :product="product" width="300px" height="300px"/>
             </v-flex>
         </v-layout>
     </v-container>
