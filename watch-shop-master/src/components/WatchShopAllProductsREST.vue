@@ -29,7 +29,7 @@
         </v-container>
 
         <v-layout row wrap>
-          <v-flex v-for="product in products" xs12 lg6>
+          <v-flex v-for="(product, index) in products" xs12 lg6 :key="`product-${index}`">
             <v-card class color="#2d2d2d" dark max-width="400">
               <v-card-title>
                 <span
@@ -66,6 +66,7 @@ export default {
       info: "",
       products: [],
       select: null,
+      error: null,
       getRoutes: this.$store.state.getRoutes,
       otherRoutes: this.$store.state.otherRoutes,
     };
@@ -77,8 +78,7 @@ export default {
         this.products = response.data
       })
       .catch(error => {
-        console.log(error)
-        this.errored = true
+        this.error = error
       })
       .finally(() => this.loading = false)
   }

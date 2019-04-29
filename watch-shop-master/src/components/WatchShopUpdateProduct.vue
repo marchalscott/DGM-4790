@@ -4,7 +4,7 @@
             
             <h2>Update a Product</h2>
           <v-flex xs6>
-            <v-field v-model="product.id" label="id" required outline></v-field>
+            <v-text-field v-model="product.id" label="id" required outline></v-text-field>
           </v-flex>
           <v-flex xs6>
             <v-text-field v-model="product.name" label="Name" required outline></v-text-field>
