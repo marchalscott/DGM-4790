@@ -22,6 +22,7 @@ export default {
   },
   methods: {
     getAllGraphql: function() {
+      // here you can get the data
       this.$apollo
         .query({
           query: gql`

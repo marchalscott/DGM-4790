@@ -1,5 +1,5 @@
 <template>
-  <div style="max-width: 900px; margin: auto;" class="grey lighten-3">
+  <div style="max-width: 1200px; margin: auto;" class="grey lighten-5">
     <v-card>
       <v-container fluid grid-list-lg>
         <h1>RESTful Server <span class="page-name">| All Products</span></h1>
@@ -30,7 +30,7 @@
 
         <v-layout row wrap>
           <v-flex v-for="(product, index) in products" xs12 lg6 :key="`product-${index}`">
-            <v-card class color="#2d2d2d" dark max-width="400">
+            <v-card class color="#878585" light max-width="400">
               <v-card-title>
                 <span
                   class="headline font-weight-bold"

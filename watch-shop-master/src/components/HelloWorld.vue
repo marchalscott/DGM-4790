@@ -1,6 +1,5 @@
 <template>
 <v-container>
-  <v-breadcrumbs :items="items" divider=">"></v-breadcrumbs>
   <v-layout
     text-xs-center
     wrap 
@@ -66,17 +65,14 @@ export default {
     {
       text: 'Home',
       disabled: false,
-      href: 'breadcrumbs_dashboard'
     },
     {
       text: 'Products',
       disabled: false,
-      href: 'breadcrumbs_link_1'
     },
     {
     text: 'Details',
     disabled: true,
-    href: 'breadcrumbs_link_2'
     }
   ],
     }

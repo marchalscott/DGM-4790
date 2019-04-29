@@ -8,9 +8,11 @@
     <v-content>
       <v-container>
         <WatchShopAllProducts/>
+        <WatchShopConnectProduct/>
         <WatchShopCreateProduct/>
         <WatchShopUpdateProduct/>
         <WatchShopDeleteProduct/>
+        <WatchShopOneProduct/>
          <display/> 
       </v-container> 
       
@@ -21,9 +23,11 @@
 <script>
 import display from './components/display'
 import WatchShopAllProducts from './components/WatchShopAllProducts'
+import WatchShopConnectProduct from './components/WatchShopConnectProduct'
 import WatchShopCreateProduct from './components/WatchShopCreateProduct'
 import WatchShopUpdateProduct from './components/WatchShopUpdateProduct'
 import WatchShopDeleteProduct from './components/WatchShopDeleteProduct'
+import WatchShopOneProduct from './components/WatchShopOneProduct'
 
 
 export default {
@@ -31,9 +35,11 @@ export default {
   components: {
     display,
     WatchShopAllProducts,
+    WatchShopConnectProduct,
     WatchShopCreateProduct,
     WatchShopUpdateProduct,
-    WatchShopDeleteProduct
+    WatchShopDeleteProduct,
+    WatchShopOneProduct
   },
   data () {
     return {
