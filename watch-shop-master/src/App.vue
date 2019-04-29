@@ -3,8 +3,8 @@
     <v-toolbar app>
         
       <v-spacer></v-spacer>
-      <v-btn color="info" @click="toggle()">GraphQL Data</v-btn>
-      <v-btn @click="toggle()">RESTful Data</v-btn>
+      <v-btn color="success" @click="toggle()" right>graphql data</v-btn>
+      <v-btn @click="toggle()" right>restful data</v-btn>
     </v-toolbar>
     <v-content>
       <v-container v-show="isOpen">

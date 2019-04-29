@@ -2,7 +2,7 @@
   <div>
     <v-container>
         <h2>All Products</h2>
-        <v-btn v-on:click="getAllGraphql(), toggle()">View All</v-btn>
+        <v-btn v-on:click="getAllGraphql(), toggle()">Get All</v-btn>
         <v-card v-show="isOpen">{{ myProduct.products }}  {{ error }}</v-card>
     </v-container>
   </div>

@@ -4,19 +4,19 @@
             
             <h2>Update a Product</h2>
           <v-flex xs12>
-            <v-field v-model="product.id" label="id" required></v-field>
+            <v-field v-model="product.id" label="id" required outline></v-field>
           </v-flex>
           <v-flex xs12>
-            <v-text-field v-model="product.name" label="Name" required></v-text-field>
+            <v-text-field v-model="product.name" label="Name" required outline></v-text-field>
           </v-flex>
           <v-flex xs12>
-            <v-text-field v-model="product.price" label="Price" required></v-text-field>
+            <v-text-field v-model="product.price" label="Price" required outline></v-text-field>
           </v-flex>
           <v-flex xs12>
-          <v-text-field v-model="product.color" label="Color" required></v-text-field>
+          <v-text-field v-model="product.color" label="Color" required outline></v-text-field>
           </v-flex>   
           <v-flex xs12>
-            <v-text-field v-model="product.size" label="Size" required></v-text-field>
+            <v-text-field v-model="product.size" label="Size" required outline></v-text-field>
           </v-flex>                 
       <v-btn @click="submitUpdate()">Update Product</v-btn>
             {{ error }}
@@ -51,7 +51,6 @@ mutation updateProduct (
     $price: Float
     $color: String
     $size: String
-    $imagelink: String
 ) {
     updateProduct(
         data:{ 
@@ -59,7 +58,6 @@ mutation updateProduct (
             price: $price
             color: $color
             size: $size
-            imagelink: $imagelink
             }
         where:{ id: $id }    
     )
@@ -69,7 +67,6 @@ mutation updateProduct (
     price
     color
     size
-    imagelink
  }
 }
           `,
@@ -79,7 +76,6 @@ mutation updateProduct (
             price: this.product.price,
             color: this.product.color,
             size: this.product.size,
-            imagelink: this.product.imagelink
           }
         })
         .then(res => {

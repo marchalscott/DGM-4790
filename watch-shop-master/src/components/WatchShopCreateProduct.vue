@@ -3,19 +3,16 @@
         <v-container>
             <h2>Create a Product</h2>
           <v-flex xs12>
-            <v-text-field v-model="product.name" label="Name" required></v-text-field>
+            <v-text-field v-model="product.name" label="Name" required outline></v-text-field>
           </v-flex>
           <v-flex xs12>
-            <v-text-field v-model="product.price" label="Price" required></v-text-field>
+            <v-text-field v-model="product.price" label="Price" required outline></v-text-field>
           </v-flex>
           <v-flex xs12>
-            <v-text-field v-model="product.color" label="Color" required></v-text-field>
+            <v-text-field v-model="product.color" label="Color" required outline></v-text-field>
           </v-flex>
           <v-flex xs12>
-            <v-text-field v-model="product.size" label="Size" required></v-text-field>
-          </v-flex>
-          <v-flex xs12>
-            <v-text-field v-model="product.imagelink" label="imagelink" required></v-text-field>
+            <v-text-field v-model="product.size" label="Size" required outline></v-text-field>
           </v-flex>
           
       <v-btn @click="submitProduct()">Add Product</v-btn>
