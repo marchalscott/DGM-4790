@@ -1,5 +1,5 @@
 <template>
-  <div id="e3" style="max-width: 900px; margin: auto;" class="grey lighten-3">
+  <div style="max-width: 900px; margin: auto;" class="grey lighten-3">
     <v-card>
       <v-container fluid grid-list-lg>
         <h1>RESTful Server <span class="page-name">| All Products</span></h1>

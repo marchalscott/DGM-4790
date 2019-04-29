@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueApollo from 'vue-apollo';
 import { createApolloClient, restartWebsockets } from 'vue-cli-plugin-apollo/graphql-client';
 
+
 // Install the vue plugin
 Vue.use(VueApollo);
 
@@ -14,7 +15,7 @@ const httpEndpoint = process.env.VUE_APP_GRAPHQL_HTTP || 'https://shielded-ravin
 // Config
 const defaultOptions = {
   httpEndpoint,
-  wsEndpoint: process.env.VUE_APP_GRAPHQL_WS || 'ws://shielded-ravine-64228.herokuapp.com/products',
+  wsEndpoint: process.env.VUE_APP_GRAPHQL_WS || 'ws://shielded-ravine-64228.herokuapp.com/products/websocket',
   tokenName: AUTH_TOKEN,
   persisting: false,
   websocketsOnly: false,
