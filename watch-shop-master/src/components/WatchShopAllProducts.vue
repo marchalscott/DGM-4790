@@ -11,16 +11,43 @@
 </template>
 
 <script>
+import axios from 'axios'
+import { get } from '../helpers/api'
 import gql from "graphql-tag";
 export default {
   data() {
     return {
       error: "",
-      myProduct: {},
+      myProduct: [],
       isOpen: false
     };
   },
   methods: {
+    async getAllProductsByAxios() {
+      const url = 'https://shielded-ravine-64228.herokuapp.com/products'
+      const headers = {
+          'Content-Type': 'application/json; charset=utf-8',
+      }
+
+      // call API
+      const res = await axios({
+          method: 'GET',
+          url: url,
+          headers,
+      })
+      // eslint-disable-next-line
+      console.log(res)
+    },
+    async getAllProductsByRest() {
+      const url = 'https://shielded-ravine-64228.herokuapp.com/products'
+      try {
+          const products = await get(url)
+          // eslint-disable-next-line
+          console.log(products)
+      } catch(e) {
+        this.error = e
+      }
+    },
     getAllGraphql: function() {
       // here you can get the data
       this.$apollo
@@ -28,7 +55,7 @@ export default {
           query: gql`
             query allProducts {
               products {
-                id
+                _id
                 name
                 price
                 color

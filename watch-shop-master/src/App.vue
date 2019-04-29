@@ -2,7 +2,7 @@
   <v-app>
     <v-toolbar app>
         
-      <!--<v-btn color="success" @click="toggle()" right>graphql data</v-btn>-->
+      <v-btn color="success" @click="toggle()" right>graphql data</v-btn>
       <v-btn color="success" @click="toggle()" right>restful data</v-btn>
     </v-toolbar>
     <v-content>
