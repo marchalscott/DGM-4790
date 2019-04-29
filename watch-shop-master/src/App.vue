@@ -2,7 +2,6 @@
   <v-app>
     <v-toolbar app>
         
-      <v-spacer></v-spacer>
       <v-btn color="success" @click="toggle()" right>graphql data</v-btn>
       <v-btn @click="toggle()" right>restful data</v-btn>
     </v-toolbar>
@@ -38,8 +37,6 @@ export default {
   },
   data () {
     return {
-      imagelogo: "",
-      //
       isOpen: false
     }
   },
