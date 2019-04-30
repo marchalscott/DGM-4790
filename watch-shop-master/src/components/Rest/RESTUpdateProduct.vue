@@ -1,9 +1,13 @@
 <template>
   <div>
         <v-container>
-            <h2>Create a Product</h2>
+            
+            <h2>Update a Product</h2>
           <v-flex xs6>
-            <v-text-field v-focus v-model="product.brand" label="Brand" required outline></v-text-field>
+            <v-text-field v-model="product.id" label="id" required outline></v-text-field>
+          </v-flex>
+          <v-flex xs6>
+            <v-text-field v-model="product.brand" label="Brand" required outline></v-text-field>
           </v-flex> 
           <v-flex xs6>
             <v-text-field v-model="product.name" label="Name" required outline></v-text-field>
@@ -19,62 +23,69 @@
           </v-flex>  
           <v-flex xs6>
             <v-text-field v-model="product.style" label="Style" required outline></v-text-field>
-          </v-flex> 
-          
-      <v-btn @click="submitProduct()">Create Product</v-btn>
-        {{ error }}
-        {{ returnedProduct }}      
+          </v-flex>                
+      <v-btn @click="submitUpdate()">Update Product</v-btn>
+            {{ error }}
+            {{ returnedProduct }}
+           
         </v-container>
   </div>
 </template>
 
 <script>
 import gql from "graphql-tag";
+
 export default {
   data: () => ({
     error: "",
     product: {
-    name: "",
-    price: "",
-    color: "",
-    size: "",
-    style: ""
+        id: "",
+        brand: "",
+        name: "",
+        price: "",
+        color: "",
+        size: "",
+        style:""
     },
     returnedProduct: null
   }),
   methods: {
-    submitProduct: function() {
+    submitUpdate: function() {
       this.$apollo.mutate({
           mutation: gql`
-            mutation createProduct(
-                $brand: String!
-                $name: String!
-                $price: Float!
-                $color: String!
-                $size: String!
-                $style: String!
-            ) {
-                createProduct(
-                  data: {
-                    brand: $brand
-                    name: $name
-                    price: $price
-                    color: $color
-                    size: $size
-                    style: $style
-                }
-              ) 
-                {
-                    brand
-                    name
-                    price
-                    color
-                    size
-                    style
-                }
+mutation updateProduct ( 
+    $id: ID!
+    $brand: String!
+    $name: String!
+    $price: Float!
+    $color: String!
+    $size: String!
+    $style: String!
+) {
+    updateProduct(
+        data:{ 
+            brand: $brand
+            name: $name
+            price: $price
+            color: $color
+            size: $size
+            style: $style
             }
+        where:{ id: $id }    
+    )
+ {
+    id
+    brand
+    name
+    price
+    color
+    size
+    style
+ }
+}
           `,
           variables: {
+            id: this.product.id,
             brand: this.product.brand,
             name: this.product.name,
             price: parseFloat(this.product.price),

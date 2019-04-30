@@ -1,26 +1,26 @@
 <template>
     <div>
-        <AllBikes/> 
-        <!-- <BikeShopCreateProduct/>
-        <BikeShopUpdateProduct/>
-        <BikeShopDeleteProduct/> -->
+        <RESTAllProducts/> 
+        <RESTCreateProduct/>
+        <RESTUpdateProduct/>
+        <RESTDeleteProduct/>
     </div>
 </template>
 
 <script>
 import { 
-    AllBikes, 
-    // BikeShopCreateProduct, 
-    // BikeShopUpdateProduct, 
-    // BikeShopDeleteProduct 
+    RESTAllProducts, 
+    RESTCreateProduct, 
+    RESTUpdateProduct, 
+    RESTDeleteProduct 
 } from './Rest'
 
 export default {
     components: {
-        AllBikes,
-        // BikeShopCreateProduct,
-        // BikeShopUpdateProduct,
-        // BikeShopDeleteProduct,
+        RESTAllProducts,
+        RESTCreateProduct,
+        RESTUpdateProduct,
+        RESTDeleteProduct,
     },
 }
 </script>

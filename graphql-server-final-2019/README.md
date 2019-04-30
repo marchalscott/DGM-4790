@@ -16,8 +16,8 @@ https://github.com/marchalscott/DGM-4790/tree/master/graphql-server-final-2019
  npm install
  npm run dockerStart
  npm run deploy
- npm run start
  npm run load - to seed the data from my seed folder
+ npm run start
 ```
 
 ## 3 Query Resolvers
