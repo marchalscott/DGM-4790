@@ -3,8 +3,8 @@
         <h1>All Bikes</h1>
         <v-layout row wrap>
             <v-flex
-              v-for="product in products"
-              :key="product.name"
+              v-for="(product, index) in products"
+              :key="`${product.name}-${index}`"
               xs3
             >
                 <BikeProductCard :product="product" width="500px" height="500px"/>

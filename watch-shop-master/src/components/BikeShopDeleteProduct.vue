@@ -3,7 +3,7 @@
         <v-container>
              <h2>Delete a Product</h2>
           <v-flex xs6>
-            <v-text-field v-model="product.id" label="id" required outline></v-text-field>
+            <v-text-field v-focus v-model="product.id" label="id" required outline></v-text-field>
           </v-flex>
       <v-btn color="error" @click="submitDelete()">Delete</v-btn>
             {{ error }}
@@ -20,7 +20,7 @@ export default {
     product: {
         id: ""
     },
-    returnedProduct: {}
+    returnedProduct: null
   }),
   methods: {
     submitDelete: function() {

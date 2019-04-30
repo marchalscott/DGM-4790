@@ -4,7 +4,6 @@
             <h3 class="headline mb-0">{{ product.name }}</h3>
         <v-card-title primary-title>
             <div>
-                <!-- <h3 class="headline mb-0">{{ product.name }}</h3> -->
                 <ul>
                     <li>Price: ${{ product.price }}</li>
                     <li>Color: {{ product.color }}</li>

@@ -3,17 +3,23 @@
         <v-container>
             <h2>Create a Product</h2>
           <v-flex xs6>
+            <v-text-field v-focus v-model="product.brand" label="Brand" required outline></v-text-field>
+          </v-flex> 
+          <v-flex xs6>
             <v-text-field v-model="product.name" label="Name" required outline></v-text-field>
           </v-flex>
           <v-flex xs6>
             <v-text-field v-model="product.price" label="Price" required outline></v-text-field>
           </v-flex>
           <v-flex xs6>
-            <v-text-field v-model="product.color" label="Color" required outline></v-text-field>
-          </v-flex>
+          <v-text-field v-model="product.color" label="Color" required outline></v-text-field>
+          </v-flex>   
           <v-flex xs6>
             <v-text-field v-model="product.size" label="Size" required outline></v-text-field>
-          </v-flex>
+          </v-flex>  
+          <v-flex xs6>
+            <v-text-field v-model="product.style" label="Style" required outline></v-text-field>
+          </v-flex> 
           
       <v-btn @click="submitProduct()">Create Product</v-btn>
         {{ error }}
@@ -32,41 +38,49 @@ export default {
     price: "",
     color: "",
     size: "",
+    style: ""
     },
-    returnedProduct: {}
+    returnedProduct: null
   }),
   methods: {
     submitProduct: function() {
       this.$apollo.mutate({
           mutation: gql`
             mutation createProduct(
-                $name: String
-                $price: Float
-                $color: String
-                $size: String
+                $brand: String!
+                $name: String!
+                $price: Float!
+                $color: String!
+                $size: String!
+                $style: String!
             ) {
                 createProduct(
                   data: {
+                    brand: $brand
                     name: $name
                     price: $price
                     color: $color
                     size: $size
+                    style: $style
                 }
               ) 
                 {
+                    brand
                     name
                     price
                     color
                     size
-                    imagelink
+                    style
                 }
             }
           `,
           variables: {
+            brand: this.product.brand,
             name: this.product.name,
-            price: this.product.price,
+            price: parseFloat(this.product.price),
             color: this.product.color,
-            size: this.product.size
+            size: this.product.size,
+            style: this.product.style
           }
         })
         .then(res => {
