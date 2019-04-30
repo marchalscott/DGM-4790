@@ -3,9 +3,6 @@
         <v-container>
             <h2>Create a Product</h2>
           <v-flex xs6>
-            <v-text-field v-focus v-model="product.brand" label="Brand" required outline></v-text-field>
-          </v-flex> 
-          <v-flex xs6>
             <v-text-field v-model="product.name" label="Name" required outline></v-text-field>
           </v-flex>
           <v-flex xs6>
@@ -17,9 +14,6 @@
           <v-flex xs6>
             <v-text-field v-model="product.size" label="Size" required outline></v-text-field>
           </v-flex>  
-          <v-flex xs6>
-            <v-text-field v-model="product.style" label="Style" required outline></v-text-field>
-          </v-flex> 
           
       <v-btn @click="submitProduct()">Create Product</v-btn>
         {{ error }}
@@ -29,66 +23,36 @@
 </template>
 
 <script>
-import gql from "graphql-tag";
+import axios from "axios";
 export default {
-  data: () => ({
-    error: "",
-    product: {
-    name: "",
-    price: "",
-    color: "",
-    size: "",
-    style: ""
-    },
-    returnedProduct: null
-  }),
+  data() {
+    return {
+      name: "",
+      price: "",
+      color: "",
+      size: "",
+    };
+  },
   methods: {
-    submitProduct: function() {
-      this.$apollo.mutate({
-          mutation: gql`
-            mutation createProduct(
-                $brand: String!
-                $name: String!
-                $price: Float!
-                $color: String!
-                $size: String!
-                $style: String!
-            ) {
-                createProduct(
-                  data: {
-                    brand: $brand
-                    name: $name
-                    price: $price
-                    color: $color
-                    size: $size
-                    style: $style
-                }
-              ) 
-                {
-                    brand
-                    name
-                    price
-                    color
-                    size
-                    style
-                }
-            }
-          `,
-          variables: {
-            brand: this.product.brand,
-            name: this.product.name,
-            price: parseFloat(this.product.price),
-            color: this.product.color,
-            size: this.product.size,
-            style: this.product.style
-          }
-        })
+    createProduct() {
+      const ProductData = {
+        name: this.item.name,
+        price: parseInt(this.item.price),
+        color: this.item.color,
+        size: this.item.size
+      };
+      // eslint-disable-next-line
+      console.log(rocketData);
+      axios
+        .post(
+          "https://sleepy-taiga-70117.herokuapp.com/products/create",
+          rocketData
+        )
         .then(res => {
-          this.returnedProduct = res.data;
+          console.log("rocket Created");
+          this.$router.push("/");
         })
-        .catch(err => {
-          this.error = err;
-        });
+        .catch(error => console.log(error));
     }
   }
 };
