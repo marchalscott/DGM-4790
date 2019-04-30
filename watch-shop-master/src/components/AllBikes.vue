@@ -1,13 +1,13 @@
 <template>
     <v-container>
-        <h1>Watches</h1>
+        <h1>Bikes</h1>
         <v-layout row wrap>
             <v-flex
               v-for="product in products"
               :key="product.name"
-              xs4
+              xs3
             >
-                <myProductCard :product="product" width="300px" height="300px"/>
+                <myProductCard :product="product" width="500px" height="500px"/>
             </v-flex>
         </v-layout>
     </v-container>
