@@ -52,7 +52,7 @@ import ProductCard from '../Card/ProductCard'
             }
         },
         mounted() {
-            this.getProducts()
+            this.getProductsByAxios()
         }
         
 }
