@@ -1,4 +1,4 @@
-# Counting Time Watch Shop
+# Bike Shop
 
 ## Project setup
 ```
