@@ -5,6 +5,7 @@
 npm install
 npm run serve
 npm run build
+Make suer docker is running
 ```
 
 ### Project Functions
