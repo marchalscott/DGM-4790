@@ -25,21 +25,23 @@
 <script>
 import axios from "axios";
 export default {
-  data() {
-    return {
+  data: () => ({
+      error: "",
+      product: {
       name: "",
       price: "",
       color: "",
       size: "",
-    };
-  },
+    },
+    returnedProduct: null
+  }),
   methods: {
     createProduct() {
       const ProductData = {
-        name: this.item.name,
-        price: parseInt(this.item.price),
-        color: this.item.color,
-        size: this.item.size
+        name: this.product.name,
+        price: parseInt(this.product.price),
+        color: this.product.color,
+        size: this.product.size
       };
       // eslint-disable-next-line
       console.log(ProductData);
@@ -47,7 +49,7 @@ export default {
         .post(
           "https://shielded-ravine-64228.herokuapp.com/product/create",
           ProductData
-        )
+        )// eslint-disable-next-line
         .then(res => {
           // eslint-disable-next-line
           console.log("Product Created");
