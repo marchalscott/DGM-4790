@@ -42,16 +42,18 @@ export default {
         size: this.item.size
       };
       // eslint-disable-next-line
-      console.log(rocketData);
+      console.log(ProductData);
       axios
         .post(
-          "https://sleepy-taiga-70117.herokuapp.com/products/create",
-          rocketData
+          "https://shielded-ravine-64228.herokuapp.com/product/create",
+          ProductData
         )
         .then(res => {
-          console.log("rocket Created");
+          // eslint-disable-next-line
+          console.log("Product Created");
           this.$router.push("/");
         })
+        // eslint-disable-next-line
         .catch(error => console.log(error));
     }
   }
