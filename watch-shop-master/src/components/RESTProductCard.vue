@@ -1,14 +1,12 @@
  <template>
-    <v-card flat tile style="border:2px solid #808080;margin: 10px; padding: 5px;">
-            <h3>{{ product.brand }}</h3>
+    <v-card flat tile style="border:1px solid #ccc;margin: 10px;">
+            <h3 class="headline mb-0">{{ product.name }}</h3>
         <v-card-title primary-title>
             <div>
                 <ul>
-                    <li>Name: {{ product.name }}</li>
                     <li>Price: ${{ product.price }}</li>
                     <li>Color: {{ product.color }}</li>
                     <li>Size: {{ product.size }}</li>
-                    <li>Style: {{ product.style }}</li>
                     <br>
                     <li>Product ID: {{ product.id }}</li>
                 </ul>

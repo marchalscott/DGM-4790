@@ -35,10 +35,12 @@ import BikeProductCard from './BikeProductCard.vue'
             products: gql`query{
                 products {
                     id
+                    brand
                     name
                     price
                     color
                     size
+                    style
                 }
             }`
         }

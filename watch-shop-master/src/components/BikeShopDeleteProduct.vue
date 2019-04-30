@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div>
         <v-container>
              <h2>Delete a Product</h2>
           <v-flex xs6>

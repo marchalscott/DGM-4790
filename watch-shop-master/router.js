@@ -15,5 +15,11 @@ export default new Router({
       redirect: "BikeShopAllProducts",
       component: BikeShopAllProducts
     },
+    {
+    path: "/BikeshopAllProductsREST",
+    name: "BikeShopAllProductsREST",
+    component: BikeShopAllProductsREST
+  }
+
   ]
 });

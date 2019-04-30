@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div>
         <v-container>
             <h2>Create a Product</h2>
           <v-flex xs6>

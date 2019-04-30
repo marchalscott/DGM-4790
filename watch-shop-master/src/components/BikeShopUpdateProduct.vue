@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div>
         <v-container>
             
             <h2>Update a Product</h2>
