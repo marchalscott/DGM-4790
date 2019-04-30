@@ -8,6 +8,7 @@
                     <li>Price: ${{ product.price }}</li>
                     <li>Color: {{ product.color }}</li>
                     <li>Size: {{ product.size }}</li>
+                    <li>Style: {{ product.style }}</li>
                     <br>
                     <li>Product ID: {{ product.id }}</li>
                 </ul>
