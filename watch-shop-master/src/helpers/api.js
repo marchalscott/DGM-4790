@@ -15,20 +15,25 @@ async function call(endpoint, params = {}, method = 'GET') {
         headers: new Headers({
             'content-type': 'application/json',
         }),
-        mode: 'no-cors',
+        // mode: 'no-cors',
         method,
         body,
     }
 
     const res = await fetch(`${endpoint}?${query}`, opts)
-    const json = await res.json()
-    // eslint-disable-next-line
-    console.log('response = ', json)
-    // if (res.status >= 400 || (json && (json.errorType >= 400 || json.errorMessage))) {
-    //     const e = new Error(json.message || json.errorMessage || res.statusText)
-    //     e.code = (json && json.errorType) || res.status
-    //     throw e
-    // }
+    if (res.status != 200) {
+        // eslint-disable-next-line
+        console.log(res)
+        const e = new Error(res.statusText)
+        e.code = res.status
+        throw e
+    }
+    var json = {}
+    res.json().then(data => {
+        json = data
+        // eslint-disable-next-line
+        console.log('response = ', data)
+    })
     return json
 }
 

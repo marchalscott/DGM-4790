@@ -1,49 +1,34 @@
 <template>
   <v-app>
     <v-toolbar app>
-      <v-btn color="success" @click="toggle()" right>graphql data</v-btn>
-      <v-btn color="success" @click="toggle()" right>RESTful</v-btn>
+      <v-btn color="success" @click="isGraphQL = true" right>graphql data</v-btn>
+      <v-btn color="success" @click="isGraphQL = false" right>RESTful</v-btn>
     </v-toolbar>
     <v-content>
       <v-container>
-        <AllBikes/> 
-        <BikeShopCreateProduct/>
-        <BikeShopUpdateProduct/>
-        <BikeShopDeleteProduct/>
-        <RESTAllProducts/>
+        <GraphProducts v-if="isGraphQL"/>
+        <RestProducts v-else/>
       </v-container> 
-      
     </v-content>
   </v-app>
 </template>
 
 <script>
-import AllBikes from './components/AllBikes'
-import BikeShopCreateProduct from './components/BikeShopCreateProduct'
-import BikeShopUpdateProduct from './components/BikeShopUpdateProduct'
-import BikeShopDeleteProduct from './components/BikeShopDeleteProduct'
-import RESTAllProducts from './components/RESTAllProducts'
+import GraphProducts from './components/GraphProducts'
+import RestProducts from './components/RestProducts'
 
 
 export default {
   name: 'App',
   components: {
-    AllBikes,
-    BikeShopCreateProduct,
-    BikeShopUpdateProduct,
-    BikeShopDeleteProduct,
-    RESTAllProducts
+    GraphProducts,
+    RestProducts
 
   },
   data () {
     return {
-      isOpen: false
+      isGraphQL: true
     }
   },
-  methods: {
-    toggle: function(){
-      this.isOpen = !this.isOpen
-    }
-  }
 }
 </script>

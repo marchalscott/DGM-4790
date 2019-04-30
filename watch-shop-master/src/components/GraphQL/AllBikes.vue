@@ -15,7 +15,7 @@
 
 <script>
 import gql from 'graphql-tag'
-import BikeProductCard from './BikeProductCard.vue'
+import BikeProductCard from '../Card/ProductCard'
 
     export default {
         name: "display",
