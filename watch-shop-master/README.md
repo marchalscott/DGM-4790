@@ -1,4 +1,4 @@
-# Bike Shop
+# Final Project
 
 ## Project setup
 ```
