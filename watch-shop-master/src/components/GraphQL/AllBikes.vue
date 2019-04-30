@@ -1,6 +1,6 @@
 <template>
     <v-container>
-        <h1>All Bikes</h1>
+        <h1>All Bikes (Please scroll to the bottom to create/delete/update)</h1>
         <v-layout row wrap>
             <v-flex
               v-for="(product, index) in products"
