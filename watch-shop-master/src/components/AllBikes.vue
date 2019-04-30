@@ -1,13 +1,13 @@
 <template>
     <v-container>
-        <h1>Bikes</h1>
+        <h1>All Bikes</h1>
         <v-layout row wrap>
             <v-flex
               v-for="product in products"
               :key="product.name"
               xs3
             >
-                <myProductCard :product="product" width="500px" height="500px"/>
+                <BikeProductCard :product="product" width="500px" height="500px"/>
             </v-flex>
         </v-layout>
     </v-container>
@@ -15,12 +15,12 @@
 
 <script>
 import gql from 'graphql-tag'
-import myProductCard from './myProductCard.vue'
+import BikeProductCard from './BikeProductCard.vue'
 
     export default {
         name: "display",
         components: {
-            myProductCard
+            BikeProductCard
         },
         data() {
             return {

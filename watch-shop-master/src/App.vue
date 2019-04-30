@@ -7,12 +7,10 @@
     <v-content>
       <v-container>
         <AllBikes/> 
-        <BikeShopAllProducts/>
         <BikeShopConnectProduct/>
         <BikeShopCreateProduct/>
         <BikeShopUpdateProduct/>
         <BikeShopDeleteProduct/>
-        <BikeShopOneProduct/>
       </v-container> 
       
     </v-content>
@@ -21,24 +19,20 @@
 
 <script>
 import AllBikes from './components/AllBikes'
-import BikeShopAllProducts from './components/BikeShopAllProducts'
 import BikeShopConnectProduct from './components/BikeShopConnectProduct'
 import BikeShopCreateProduct from './components/BikeShopCreateProduct'
 import BikeShopUpdateProduct from './components/BikeShopUpdateProduct'
 import BikeShopDeleteProduct from './components/BikeShopDeleteProduct'
-import BikeShopOneProduct from './components/BikeShopOneProduct'
 
 
 export default {
   name: 'App',
   components: {
     AllBikes,
-    BikeShopAllProducts,
     BikeShopConnectProduct,
     BikeShopCreateProduct,
     BikeShopUpdateProduct,
     BikeShopDeleteProduct,
-    BikeShopOneProduct
   },
   data () {
     return {
