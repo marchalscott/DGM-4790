@@ -16,7 +16,7 @@
     "express": "^4.16.4",
     "git-init": "^1.0.0",
     "mongodb": "^3.1.13",
-    "node-fetch": "^2.3.0",
+    "node-fetch": "^2.6.1",
     "nodemon": "^1.18.9"
   }
 }
